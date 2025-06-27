@@ -4,7 +4,7 @@ import { Typography } from "@material-tailwind/react";
 
 const Contact = () => {
   return (
-    <div className=" p-5 md:p-10">
+    <div id="contact" className=" p-5 md:p-10">
       <p className="text-2xl font-bold flex justify-center items-center gap-2 pb-2 text-textPrimary">
         Contact Us
       </p>

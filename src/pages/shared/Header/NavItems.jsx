@@ -79,13 +79,32 @@ const NavItems = ({ scrollPosition }) => {
     >
       <div className="flex ">
         <Link to="/">
-          <NavButton label="Home" />
+          <NavButton label="Home"   onClick={() => {
+            const el = document.getElementById("home");
+            if (el) {
+              const yOffset = -80; // adjust based on your fixed header height
+              const y =
+                el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }
+          }}/>
         </Link>
         <NavButton label="About Us" />
         {serviceMenu}
 
         <NavButton label="Offers" />
-        <NavButton label="Contact Us" />
+        <NavButton
+          label="Contact Us"
+          onClick={() => {
+            const el = document.getElementById("contact");
+            if (el) {
+              const yOffset = -80; // adjust based on your fixed header height
+              const y =
+                el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }
+          }}
+        />
       </div>
     </div>
   );

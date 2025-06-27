@@ -4,7 +4,10 @@ import TypingAnimation from "../../components/banner/TypingAnimation";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row min-h-96 px-5 md:px-10  md:pt-10 mt-[4rem]">
+    <div
+      id="home"
+      className="flex flex-col-reverse md:flex-row min-h-96 px-5 md:px-10  md:pt-10 mt-[4rem]"
+    >
       <div className="w-full md:w-1/2 flex flex-col justify-center gap-4 md:pr-5 py-10 md:py-0">
         <Typography className="text-3xl md:text-4xl font-bold !leading-[40px] text-center md:text-left">
           Your visa solutions for <br />
