@@ -1,0 +1,7 @@
+.parent:hover .child { 
+    background-color:#fff;
+ }
+
+ .backdrop-blur-sm{
+    position:fixed!important
+ }
