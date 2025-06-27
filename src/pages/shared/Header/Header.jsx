@@ -140,7 +140,20 @@ export function Header() {
               </ListItem>
             </Link>
             <Link to="/" onClick={() => setIsOpenDrawer(false)}>
-              <ListItem className="border-b border-primary rounded-none font-medium">
+              <ListItem
+                className="border-b border-primary rounded-none font-medium"
+                onClick={() => {
+                  const el = document.getElementById("contact");
+                  if (el) {
+                    const yOffset = -80; // adjust based on your fixed header height
+                    const y =
+                      el.getBoundingClientRect().top +
+                      window.pageYOffset +
+                      yOffset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+              >
                 {/* <ListItemPrefix>
                   <IoHomeOutline className="h-5 w-5" />
                 </ListItemPrefix> */}

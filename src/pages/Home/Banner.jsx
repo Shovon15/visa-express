@@ -18,6 +18,15 @@ const Banner = () => {
             size="lg"
             variant="outlined"
             className=" font-bold capitalize outline-none py-2 gap-3 px-2 hover:bg-transparent  w-44 text-primary text-xl border-b-4 border-r-4 border-primary mt-5 ring-0 focus:ring-0 hover:border-t-primary hover:border-l-primary hover:border-b-black hover:border-r-black hover:bg-primary active:bg-primary/80 hover:text-white"
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                const yOffset = -80; // adjust based on your fixed header height
+                const y =
+                  el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
           >
             Contact Us
           </Button>
